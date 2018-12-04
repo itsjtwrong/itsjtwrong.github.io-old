@@ -38,4 +38,13 @@ export default {
       object-fit:contain;
       object-position: left;
   }
+  @media (max-width:500px) {
+  .box {
+    width:100%;
+    height:auto;
+  }
+  .shot {
+    width:90vw;
+  }
+  }
 </style>

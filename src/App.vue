@@ -22,4 +22,13 @@ body {
   margin: 25px;
   display:flex;
 }
+
+@media (max-width:500px) {
+  body {
+    margin:5px;
+  }
+  #app {
+    margin:0px;
+  }
+}
 </style>

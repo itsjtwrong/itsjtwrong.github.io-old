@@ -20,8 +20,8 @@ export default {
   data() {
     return {
       projects: [
+        { id: 1, name: 'Incorrect Thoughts', src: 'incorrectThoughts.png' },
         { id: 0, name: 'Wrong Design Apparel', src: 'noCoastBlues.jpg' },
-        { id: 1, name: 'Incorrect Thoughts' },
       ],
     };
   },
@@ -38,5 +38,10 @@ export default {
     display:flex;
     flex-wrap: wrap;
     margin:25px;
+  }
+  @media (max-width:500px) {
+    .hello {
+    margin:10px;
+  }
   }
 </style>
