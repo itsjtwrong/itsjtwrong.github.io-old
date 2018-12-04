@@ -30,10 +30,4 @@ body {
 html {
   min-height:100%;
 }
-
-@media (max-width:500px) {
-  #app {
-
-  }
-}
 </style>

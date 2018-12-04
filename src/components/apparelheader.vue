@@ -25,10 +25,8 @@ export default {
   .items {
     display: flex;
     justify-content:space-between;
-    width:inherit;
+    width:100%;
     max-width:1400px;
-    /* margin-left:100px;
-    margin-right:100px; */
     padding-left:0px;
   }
 </style>
