@@ -12,23 +12,28 @@ export default {
 
 <style>
 body {
-  background: #eee;
-  margin:25px;
+  margin:0px;
+  min-height:100vh;
+  padding:0px;
   display:flex;
+  width:inherit;
 }
 
 #app {
   font-family: monospace;
-  margin: 25px;
+  padding: 0;
   display:flex;
+  width:100%;
+  min-height:100%;
+}
+
+html {
+  min-height:100%;
 }
 
 @media (max-width:500px) {
-  body {
-    margin:5px;
-  }
   #app {
-    margin:0px;
+
   }
 }
 </style>

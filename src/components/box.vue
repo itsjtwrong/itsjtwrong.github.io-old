@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <img class='shot' v-if='imgSrc' :src="require('../assets/'+imgSrc)">
+    <img class='shot' @click='goToPage(page)' v-if='imgSrc' :src="require('../assets/'+imgSrc)">
     <h1 class="title">{{title}}</h1>
     <p v-if='isFirst'>—</p>
     <p v-if='isFirst'>The crackpot hub for JT Wright's design work.
@@ -15,7 +15,12 @@
 <script>
 export default {
   name: 'box',
-  props: ['title', 'isFirst', 'imgSrc'],
+  props: ['title', 'isFirst', 'imgSrc', 'page'],
+  methods: {
+    goToPage(page) {
+      this.$router.push({ name: page });
+    },
+  },
 };
 </script>
 
@@ -38,6 +43,10 @@ export default {
       object-fit:contain;
       object-position: left;
   }
+
+  .shot:hover {
+    cursor:crosshair;
+  }
   @media (max-width:500px) {
   .box {
     width:100%;
@@ -47,4 +56,8 @@ export default {
     width:90vw;
   }
   }
+</style>
+
+<style>
+
 </style>
