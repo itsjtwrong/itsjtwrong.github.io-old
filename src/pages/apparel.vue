@@ -1,5 +1,8 @@
 <template>
-    <apparelheader />
+    <div id="apparel">
+      <apparelheader />
+      <router-view/>
+    </div>
 </template>
 
 <script>
@@ -15,5 +18,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  #apparel {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    max-width:1400px;
+    margin-right:auto;
+    margin-left:auto;
+    flex-wrap:wrap;
+    align-content:start;
+    justify-content: start;
+  }
 </style>

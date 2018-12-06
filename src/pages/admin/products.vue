@@ -1,15 +1,10 @@
 <template>
-  <apparelheader />
+  <h1>Products</h1>
 </template>
 
 <script>
-import apparelheader from '@/components/apparelheader';
-
 export default {
-  name: 'admin',
-  components: {
-    apparelheader,
-  },
+  name: 'products',
 };
 </script>
 

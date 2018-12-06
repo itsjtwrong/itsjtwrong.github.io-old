@@ -4,7 +4,10 @@ import HelloWorld from '@/pages/HelloWorld';
 import apparel from '@/pages/apparel';
 import blog from '@/pages/blog';
 import cart from '@/pages/cart';
-import admin from '@/pages/admin';
+import admin from '@/pages/admin/index';
+import New from '@/pages/admin/new';
+import Edit from '@/pages/admin/edit';
+import Products from '@/pages/admin/products';
 
 Vue.use(Router);
 
@@ -19,21 +22,40 @@ export default new Router({
       path: '/apparel',
       name: 'apparel',
       component: apparel,
+      children: [
+        {
+          path: 'cart',
+          name: 'cart',
+          component: cart,
+        },
+        {
+          path: 'admin',
+          name: 'admin',
+          component: admin,
+          children: [
+            {
+              path: 'new',
+              name: 'New',
+              component: New,
+            },
+            {
+              path: '',
+              name: 'Products',
+              component: Products,
+            },
+            {
+              path: 'edit/:id',
+              name: 'Edit',
+              component: Edit,
+            },
+          ],
+        },
+      ],
     },
     {
       path: '/blog',
       name: 'blog',
       component: blog,
-    },
-    {
-      path: '/apparel/cart',
-      name: 'cart',
-      component: cart,
-    },
-    {
-      path: '/apparel/admin',
-      name: 'admin',
-      component: admin,
     },
   ],
 });
