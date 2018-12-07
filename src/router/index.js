@@ -5,6 +5,7 @@ import apparel from '@/pages/apparel';
 import blog from '@/pages/blog';
 import cart from '@/pages/cart';
 import about from '@/pages/about';
+import home from '@/pages/home';
 
 Vue.use(Router);
 
@@ -29,6 +30,11 @@ export default new Router({
           path: 'about',
           name: 'about',
           component: about,
+        },
+        {
+          path: '',
+          name: 'home',
+          component: home,
         },
       ],
     },
