@@ -2,7 +2,7 @@
   <div class="apparelheader">
     <ul class="items">
       <div>
-        <router-link to="/apparel/admin">admin</router-link>
+        <router-link to="/apparel/about">about</router-link>
       </div>
       <div>
         <router-link to="/apparel">WRONG DESIGN APPAREL</router-link>
