@@ -2,8 +2,8 @@
     <div class="about">
         <h1>About</h1>
         <p>Wrong Design Apparel started as a cheaper
-            alternative to paying for band  merch for my friend Tristan Deering and I.
-            From that we learned that spray paint
+            alternative to paying for band  merch for my friend Tristan and I.
+            Quickly we learned that spray paint
             and a tshirt means  infinite possibilities for a couple of teenagers.
             We started experimenting with designs and messages that we loved and this
             turned into a very expressive hobby.

@@ -13,6 +13,16 @@ export default {
   components: {
     apparelheader,
   },
+  created() {
+    if (this.products.length === 0) {
+      this.$store.dispatch('allProducts');
+    }
+  },
+  computed: {
+    products() {
+      return this.$store.getters.allProducts;
+    },
+  },
 };
 </script>
 

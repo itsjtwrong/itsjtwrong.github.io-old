@@ -6,6 +6,7 @@ import blog from '@/pages/blog';
 import cart from '@/pages/cart';
 import about from '@/pages/about';
 import home from '@/pages/home';
+import collection from '@/pages/collection';
 
 Vue.use(Router);
 
@@ -20,6 +21,7 @@ export default new Router({
       path: '/apparel',
       name: 'apparel',
       component: apparel,
+      redirect: 'apparel/home',
       children: [
         {
           path: 'cart',
@@ -32,9 +34,14 @@ export default new Router({
           component: about,
         },
         {
-          path: '',
+          path: 'home',
           name: 'home',
           component: home,
+        },
+        {
+          path: 'collection/:id',
+          name: 'collection',
+          component: collection,
         },
       ],
     },
