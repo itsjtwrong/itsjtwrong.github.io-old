@@ -1,7 +1,10 @@
 <template>
   <div class="home">
       <div class="collections">
-          <router-link v-bind:to="`collection/${product._id}`" class="collection" :key='product._id' v-for="product in products">
+          <router-link v-bind:to="`collection/${product._id}`"
+           class="collection"
+           :key='product._id'
+           v-for="product in products">
             <div class="text">
             <h1>{{product.name}}</h1>
             <h3>In stock: {{product.quantity}}</h3>

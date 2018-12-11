@@ -8,7 +8,7 @@
         <router-link to="/apparel">WRONG DESIGN APPAREL</router-link>
       </div>
       <div>
-        <router-link to="/apparel/cart">cart</router-link>
+        <router-link to="/apparel/cart">cart ({{cartItemsCount}})</router-link>
       </div>
     </ul>
   </div>
@@ -17,6 +17,19 @@
 <script>
 export default {
   name: 'apparelheader',
+  data() {
+    return {
+      cartItems: this.$store.state.cart,
+    };
+  },
+  computed: {
+    products() {
+      return this.$store.getters.productById(this.$route.params.id);
+    },
+    cartItemsCount() {
+      return this.cartItems.length;
+    },
+  },
 };
 </script>
 

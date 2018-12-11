@@ -37,7 +37,7 @@ export default {
 p {
     font-size:18px;
     margin: 0 10px 0 10px;
-    line-height:24px;
+    line-height:27px;
 }
     .spoiler{
   color: black;
