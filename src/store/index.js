@@ -17,6 +17,7 @@ export default new Vuex.Store({
     product: {},
     // all products
     products: [],
+    users: [],
   },
   // GETTERS
   getters: Object.assign({}, productGetters),

@@ -13,6 +13,7 @@ import {
   REMOVE_PRODUCT_SUCCESS,
   ALL_PRODUCTS,
   ALL_PRODUCTS_SUCCESS,
+  ADD_USER,
 } from './mutation-types';
 
 const API_BASE = 'https://dry-temple-94195.herokuapp.com';
@@ -55,6 +56,11 @@ const productActions = {
       commit(REMOVE_PRODUCT_SUCCESS, response.data);
     });
   },
+  addUser({ commit }, payload) {
+    commit(ADD_USER);
+    axios.post(`${API_BASE}/customers`, payload);
+  },
 };
+
 
 export { productActions as default };

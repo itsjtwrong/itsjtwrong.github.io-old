@@ -13,6 +13,7 @@ import {
   REMOVE_FROM_CART,
   ALL_PRODUCTS,
   ALL_PRODUCTS_SUCCESS,
+  ADD_USER,
 } from './mutation-types';
 
 const productMutations = {
@@ -70,4 +71,8 @@ const cartMutations = {
   },
 };
 
-export { productMutations, cartMutations };
+const userMutations = {
+  [ADD_USER]: (state, payload) => state.users.push(payload)
+};
+
+export { productMutations, cartMutations, userMutations };
