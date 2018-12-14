@@ -72,7 +72,7 @@ const cartMutations = {
 };
 
 const userMutations = {
-  [ADD_USER]: (state, payload) => state.users.push(payload)
+  [ADD_USER]: (state, payload) => state.users.push(payload),
 };
 
 export { productMutations, cartMutations, userMutations };
