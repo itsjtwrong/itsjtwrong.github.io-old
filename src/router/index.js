@@ -11,6 +11,8 @@ import collection from '@/pages/collection';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
+  hash: false,
   routes: [
     {
       path: '/',
@@ -50,5 +52,8 @@ export default new Router({
       name: 'blog',
       component: blog,
     },
+    // {
+    //   path: '*', redirect: '/',
+    // },
   ],
 });
