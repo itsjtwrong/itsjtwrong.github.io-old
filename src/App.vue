@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <router-view/>
+    <div class="overlay" v-show="showLoader">
+      <div class="loading-spinner">
+        Loading...
+      </div>
   </div>
 </template>
 
@@ -8,6 +12,16 @@
 
 export default {
   name: 'App',
+  computed: {
+    cartItemsCount () {
+      // Cart count
+      return this.cartItems.length
+    },
+    showLoader () {
+      // Loading spinner
+      return this.$store.state.showLoader
+    }
+  }
 };
 </script>
 

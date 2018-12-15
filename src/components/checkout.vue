@@ -43,7 +43,8 @@ export default {
     },
     done ({token, args}) {
       axios.post('http://dry-temple-94195.herokuapp.com/customers', {
-        body: args,
+        customer: args,
+        items: this.$store.state.cart
       })
       axios.post('http://dry-temple-94195.herokuapp.com/api/stripe', {
           stripeToken: token.id,
