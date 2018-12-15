@@ -37,7 +37,7 @@ export default {
   .hello {
     width:100%;
     display:flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding:50px;
   }
   @media (max-width:500px) {
