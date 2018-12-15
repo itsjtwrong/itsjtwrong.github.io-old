@@ -21,8 +21,8 @@ export default {
   data() {
     return {
       projects: [
-        { id: 1, name: 'Incorrect Thoughts', src: 'incorrectThoughts.png', page: 'blog' },
         { id: 0, name: 'Wrong Design Apparel', src: 'noCoastBlues.jpg', page: 'apparel' },
+        { id: 1, name: 'Incorrect Thoughts', src: 'incorrectThoughts.png', page: 'blog' },
       ],
     };
   },
@@ -37,7 +37,7 @@ export default {
   .hello {
     width:100%;
     display:flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     padding:50px;
   }
   @media (max-width:500px) {
