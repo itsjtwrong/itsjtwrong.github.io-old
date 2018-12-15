@@ -53,5 +53,8 @@ p {
           color: black;
         background-color:white;
       }
+      .spoiler:hover {
+          background-color:black;
+      }
   }
 </style>

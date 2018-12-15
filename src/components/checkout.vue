@@ -17,59 +17,57 @@
     <div class="checkout" @click="checkout">Checkout | Total ${{setPrice()/100}} (ships to US)</div>
   </div>
 </template>
- 
+
 <script>
 import Vue from 'vue';
 import VueStripeCheckout from 'vue-stripe-checkout';
 import axios from 'axios';
- 
+
 Vue.use(VueStripeCheckout, 'pk_live_BHZWoiVI8O9qB7V4coGlN6zV');
 
 export default {
-    name: 'checkout',
+  name: 'checkout',
   data() {
     return {
       name: 'WRONG DESIGN APPAREL',
       description: '',
       currency: 'USD',
-      cartItems: this.$store.state.cart, 
-    }
+      cartItems: this.$store.state.cart,
+    };
   },
   methods: {
-    async checkout () {
+    async checkout() {
       // token - is the token object
       // args - is an object containing the billing and shipping address if enabled
       const { token, args } = await this.$refs.checkoutRef.open();
     },
-    done ({token, args}) {
+    done({ token, args }) {
       axios.post('http://dry-temple-94195.herokuapp.com/customers', {
         customer: args,
-        items: this.$store.state.cart
-      })
+        items: this.$store.state.cart,
+      });
       axios.post('http://dry-temple-94195.herokuapp.com/api/stripe', {
-          stripeToken: token.id,
-          price: this.setPrice()
-      })
-
+        stripeToken: token.id,
+        price: this.setPrice(),
+      });
     },
-    opened () {
+    opened() {
     },
-    closed () {
-      // do stuff 
+    closed() {
+      // do stuff
     },
     setPrice() {
-      console.log("here");
       let price = 0;
-      this._data.cartItems.forEach(element => {
-        price += parseInt(element.price);
+      this._data.cartItems.forEach((element) => {
+        price += parseInt(element.price, 10);
       });
       return price * 100;
     },
   },
   computed: {
-    
-  }
-}
+
+  },
+};
 </script>
 <style>
 .checkout{

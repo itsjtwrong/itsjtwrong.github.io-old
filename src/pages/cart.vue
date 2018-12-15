@@ -16,10 +16,11 @@
 import checkout from '@/components/checkout';
 import Vue from 'vue';
 import VeeValidate from 'vee-validate';
+
 Vue.use(VeeValidate);
 
 export default {
-  name: "cart",
+  name: 'cart',
   components: {
     checkout,
   },
@@ -34,20 +35,20 @@ export default {
         addrsl2: '',
         city: '',
         state: '',
-        zip:  '',
+        zip: '',
       },
       cartItems: this.$store.state.cart,
       showForm: false,
-    }
+    };
   },
   methods: {
     addPrice() {
       let price = 0;
-      this._data.cartItems.forEach(element => {
-        price += parseInt(element.price);
+      this._data.cartItems.forEach((element) => {
+        price += parseInt(element.price, 10);
       });
       return price;
-    }
+    },
   },
 };
 </script>

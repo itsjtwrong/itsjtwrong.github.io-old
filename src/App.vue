@@ -6,6 +6,7 @@
         Loading...
       </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -13,15 +14,15 @@
 export default {
   name: 'App',
   computed: {
-    cartItemsCount () {
+    cartItemsCount() {
       // Cart count
-      return this.cartItems.length
+      return this.cartItems.length;
     },
-    showLoader () {
+    showLoader() {
       // Loading spinner
-      return this.$store.state.showLoader
-    }
-  }
+      return this.$store.state.showLoader;
+    },
+  },
 };
 </script>
 
