@@ -39,7 +39,7 @@ export default {
   }
   .shot {
       width:400px;
-      height:250px;
+      max-height:250px;
       object-fit:contain;
       object-position: left;
   }

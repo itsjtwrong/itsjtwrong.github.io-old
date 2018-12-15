@@ -47,4 +47,11 @@ p {
 .spoiler:hover{
   color: white;
   }
+
+  @media (max-width: 500px) {
+      .spoiler {
+          color: black;
+        background-color:white;
+      }
+  }
 </style>

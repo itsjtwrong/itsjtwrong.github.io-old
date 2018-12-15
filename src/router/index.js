@@ -52,8 +52,8 @@ export default new Router({
       name: 'blog',
       component: blog,
     },
-    // {
-    //   path: '*', redirect: '/',
-    // },
+    {
+      path: '*', redirect: '/',
+    },
   ],
 });
