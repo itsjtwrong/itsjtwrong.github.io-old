@@ -18,7 +18,7 @@ export default new Vuex.Store({
     // all products
     products: [],
     users: [],
-    posts: [{'id':'0', 'name': 'ZERO', 'post': `Sometimes I can't tell if my efforts are reasonable but I think they are. I think I love her I think there's too much to do to be sad but its a string thing “to not be sad”. Is that possible? I think life is better when one is happy but It doesn't seem like it should be that easy. I think I’m  maker and that's a good thing. Tristans a maker. I think this world is chicken.\n
+    posts: [{'id':'0', 'name': 'ZERO', 'content': `Sometimes I can't tell if my efforts are reasonable but I think they are. I think I love her I think there's too much to do to be sad but its a string thing “to not be sad”. Is that possible? I think life is better when one is happy but It doesn't seem like it should be that easy. I think I’m  maker and that's a good thing. Tristans a maker. I think this world is chicken.\n
     PRIORITIES
     -Make things
     --For you

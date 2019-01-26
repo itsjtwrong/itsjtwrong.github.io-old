@@ -11,10 +11,10 @@
 export default {
 
   name: 'blog',
-  data() {
-    return {
-      posts: this.$store.state.posts
-    };
+  computed: {
+    posts() {
+      return this.$store.getters.allPosts;
+    },
   },
 };
 </script>

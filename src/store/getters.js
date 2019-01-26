@@ -13,7 +13,7 @@ const productGetters = {
   allPosts: state => state.posts,
   postById: (state, getters) => (id) => {
     if (getters.allPosts.length > 0) {
-      return getters.allPosts.filter(p => p._id === id)[0];
+      return getters.allPosts.filter(p => p.id === id)[0];
     }
   }
 };

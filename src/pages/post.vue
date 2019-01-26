@@ -1,21 +1,29 @@
 <template>
     <div id="post">
-        <h1>{{post.name}}</h1>
-        {{post.post}}
+        <h1>{{content.name}}</h1>
+        {{content.content}}
     </div>
 </template>
 
 <script>
-let id = window.location.href.split('/')
-id = id[id.length-1]
-console.log(id)
-export default {
+function findId() {
+    let id = window.location.href.split('/')
+    return id = id[id.length-1]
+    console.log(id)
+}
 
+export default {
   name: 'blog',
   data() {
     return {
-      post: this.$store.state.posts[id]
+      post: this.$store.state.posts
     }
+  },
+  computed: {
+    content() {
+    let id = findId()
+      return this.$store.getters.postById(id);
+    },
   },
 };
 </script>
