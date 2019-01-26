@@ -2,14 +2,15 @@
   <div class="hello" :style='{background:"#eee"}'>
     <box title='Wrong Design' isFirst='true'/>
     <box />
-      <div
+
+      <router-link
       is='box'
        v-for='project in projects'
        v-bind:title='project.name'
        v-bind:imgSrc='project.src'
        v-bind:key='project.id'
        v-bind:page='project.page'
-       ></div>
+       ></router-link>
   </div>
 </template>
 

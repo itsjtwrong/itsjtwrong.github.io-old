@@ -7,6 +7,7 @@ import cart from '@/pages/cart';
 import about from '@/pages/about';
 import home from '@/pages/home';
 import collection from '@/pages/collection';
+import post from '@/pages/post';
 
 Vue.use(Router);
 
@@ -51,6 +52,11 @@ export default new Router({
       path: '/blog',
       name: 'blog',
       component: blog,
+    },
+    {
+      path: '/blog/post/:id',
+      name: 'post',
+      component: post,
     },
     {
       path: '*', redirect: '/',
