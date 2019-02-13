@@ -12,8 +12,7 @@ import post from '@/pages/post';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
-  hash: false,
+  hash: true,
   routes: [
     {
       path: '/',
