@@ -38,7 +38,31 @@ export default new Vuex.Store({
     My boy abstract
 
     Screen readers can be set to only read Hn tags, so use them accordingly. 
-    `}],
+    `}, {'id':'1', 'name': 'ONE', 'content': `"Church" (needs a better name)... The blot?
+	    Learn, help, make, do. Be apart of the community
+	    Coworking space by day, Sundays it'll be a religionless church.
+	    -Tight knit community
+	    -The higher power is the community
+	    -Not really a church make sure to avoid the neck beard vibe
+	    -Wifi for people who need it
+	    -Habitat for humanity
+	    -Breakfast
+	    
+	    0. OPEN TEA SHOP
+	    	-Different kinds of tea and people
+	    1. Expand into books
+	    2. Rent out room for people to work
+	    
+	    Be a good father figure for those close
+	    Have space for people to display art
+	    
+	    Why do people wait to do? It's like in a while something will change, I will get some coun to pun in the slot to do "business" or something
+	    
+	    Get people up and learing and growing
+	    
+	    Foster genius
+	    
+	    Use one main tage a page to help people using screen readers`}],
   },
   // GETTERS
   getters: Object.assign({}, productGetters),
