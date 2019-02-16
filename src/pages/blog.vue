@@ -1,7 +1,7 @@
 <template>
 <div class="main">
     <router-link v-for="post in posts" class="posts" v-bind:key="post.id" v-bind:to="`blog/post/${post.id}`">
-      <h1>{{post.name}}</h1>
+      <h1>{{post.name}}&nbsp;</h1>
     </router-link>
 </div>
 </template>
@@ -22,7 +22,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .posts {
-    display:inline;
+    display:inline-block;
     text-decoration: none;
     color:black;
   }
